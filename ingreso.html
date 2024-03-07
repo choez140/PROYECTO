@@ -1,0 +1,85 @@
+html :<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ingreso de Producto</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <style>
+        body {
+            background-color: #f8f9fa;
+        }
+
+        .container {
+            margin-top: 50px;
+        }
+
+        .form-container {
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        label {
+            font-weight: bold;
+        }
+
+        select, input[type="text"], input[type="number"], input[type="date"] {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 10px;
+            border: 1px solid #ced4da;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+        input[type="submit"] {
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="container"> 
+        <div class="row">
+            <div class="col-md-6 offset-md-3 form-container">
+                <h2 class="text-center mb-4">Ingreso de Producto</h2>
+                <form action="guardar_productos.php" method="POST">
+                    <label for="cod_producto">Código de Producto:</label>
+                    <input type="text" name="cod_producto" required>
+
+                    <label for="nom_producto">Nombre de Producto:</label>
+                    <input type="text" name="nom_producto" required>
+
+                    <label for="precio">Precio:</label>
+                    <input type="text" name="precio" required>
+
+                    <label for="fecha_elab">Fecha de Elaboración:</label>
+                    <input type="date" name="fecha_elab" required>
+
+                    <label for="fecha_cad">Fecha de Caducidad:</label>
+                    <input type="date" name="fecha_cad" required>
+
+                    <label for="cantidad">Cantidad:</label>
+                    <input type="number" name="cantidad" required>
+
+                    <label for="cod_categoria">Código de Categoría:</label>
+                    <input type="text" name="cod_categoria" required>
+
+
+
+                    <div class="text-center mt-4">
+                        <input type="submit" value="Ingresar Producto">
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+</html> 
+
